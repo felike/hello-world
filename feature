@@ -4,3 +4,6 @@ feature
 hello.txt
 nd
 README.md
+  PID TTY          TIME CMD
+16724 pts/22   00:00:00 bash
+17258 pts/22   00:00:00 ps
