@@ -1,0 +1,61 @@
+## insert the exec in .bashrc
+# [ -f ~/.bashrc_usr ] && . ~/.bashrc_usr
+[ -z "$PS1" ] && return
+
+#insert the different info between mac and linux
+sysOs=`uname -s`
+if [ $sysOs == "Darwin" ]; then
+
+alias ls="ls -hG"
+alias ll="ls -alhG"
+alias lss="ls -alhGS"
+alias lsn="ls -alhGt"
+alias lsc="ls -alhGc"
+elif [ $sysOs == "Linux" ]; then
+
+alias ls="ls -h --color"
+alias ll="ls -alh --color"
+alias lss="ls -alhS --color"
+alias lsn="ls -alht --color"
+alias lsc="la -alhc --color"
+fi
+
+#insert the common part
+
+#alias 
+alias grep="grep --colour"
+alias h=history
+alias vi=vim
+alias rsync="rsync --progress"
+alias df="df -hT"
+alias du="du -h --maxdepth=1"
+alias rm="rm -i"
+alias dir="dir --colour" 
+
+#alias for c or c++
+alias cscope="cscope -CR -p10"
+alias ctags="ctags -R *"
+
+#PS1 setting
+export PS1="\h:\[\e[31;1m\]\W>\[\e[0m\] "
+export LC_ALL=C
+export TERM="xterm-256color"
+
+#History Setting
+#don't put duplicate lines and lines starting with space into file
+export HISTCONTROL=ignoreboth
+export HISTSIZE=3000
+export HISTFILESIZE=12000
+#append to history, dno't overwrite it
+shopt -s histappend
+#append history realtime
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND;"
+
+#other setting
+shopt -s checkwinsize
+shopt -s extglob
+#correct cd minor error
+shopt -s cdspell
+
+#set vi
+set -o vi
