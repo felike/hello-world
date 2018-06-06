@@ -117,9 +117,8 @@ filetype plugin indent on
 set background=dark
 "set background=light
 "colorscheme solarized
-"let g:Powerlin_colorscheme='solarized256'
 colorscheme molokai
-let g:Powerline_colorscheme='molokai'
+let g:Powerline_colorscheme='solarized256'
 
 "缩进可视化配置，vim 自启动, 第二层可视化显示缩进, 色块宽度1,快捷键 wi 开/关缩进可视化
 let g:indent_guides_enable_on_vim_startup=1
