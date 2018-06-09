@@ -1,4 +1,4 @@
-let  mapleader=";"
+let  mapleader=","
 "in normal mode, using w, and in insert mode using j
 imap jj  <esc>
 cmap jj  <esc><esc>
@@ -48,10 +48,11 @@ vnoremap wy "+y
 nnoremap wp "+p
 
 "设置保存，关闭
-nnoremap <leader>wq :wa<cr> :q<cr>
-nnoremap <leader>ww :wa<cr>
+"nnoremap <leader>wq :wa<cr> :q<cr>
+"nnoremap <leader>ww :wa<cr>
 nnoremap wq :q<cr>
-nnoremap wa :wa<cr>
+nnoremap ww :wa<cr>
+
 
 "设置搜索
 set incsearch
@@ -198,9 +199,6 @@ Plugin 'gcmt/wildfire.vim'
 Plugin 'sjl/gundo.vim'
 "快速移动
 Plugin 'Lokaltog/vim-easymotion'
-"模糊查找文件，buffer ， tags
-Plugin 'Yggdroot/LeaderF'
-
 
 " 插件列表结束
 call vundle#end()
@@ -381,32 +379,6 @@ let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
 
 "  " 调用 gundo 树
 nnoremap <Leader>u :GundoToggle<CR>
-
-""LeaderF setting
-nnoremap <leader>fj :LeaderfFile<cr>
-nnoremap <leader>fp :LeaderfFilePattern<cr>
-nnoremap <leader>fc :LeaderfFileCword<cr>
-nnoremap <leader>fbb :LeaderfBuffer<cr>
-nnoremap <leader>fbp :LeaderfBufferPattern<cr>
-nnoremap <leader>fbt :LeaderfTabBuffer<cr>
-nnoremap <leader>fba :LeaderfBufferAll<cr>
-nnoremap <leader>fbc :LeaderfBufferCword<cr>
-nnoremap <leader>ftt :LeaderfTag<cr>
-nnoremap <leader>ftp :LeaderfTagPattern<cr>
-nnoremap <leader>ftc :LeaderfTagCword<cr>
-nnoremap <leader>ftb :LeaderfBufTag<cr>
-nnoremap <leader>fta :LeaderfBufTagAll<cr>
-nnoremap <leader>fto :LeaderfBufTagPattern <cr>
-nnoremap <leader>fmm :LeaderfMru<cr>
-nnoremap <leader>fmd :LeaderfMruCwd<cr>
-nnoremap <leader>fmp :LeaderfMruPattern<cr>
-nnoremap <leader>fmc :LeaderfMruCword<cr>
-nnoremap <leader>fmo :LeaderfMruCwdPattern<cr>
-nnoremap <leader>fff :LeaderfFunction<cr>
-nnoremap <leader>ffa :LeaderfFunctionAll<cr>
-nnoremap <leader>ffp :LeaderfFunctionPattern<cr>
-nnoremap <leader>ffc :LeaderfFunctionCword<cr>
-nnoremap <leader>ffo :LeaderfFunctionAllPattern<cr>
 
 "语法高亮，指定语法高亮方案覆盖默认方案
 syntax enable

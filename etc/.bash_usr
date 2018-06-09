@@ -11,6 +11,7 @@ alias ll="ls -alhG"
 alias lss="ls -alhGS"
 alias lsn="ls -alhGt"
 alias lsc="ls -alhGc"
+alias du="du -h --maxdepth=1"
 elif [ $sysOs == "Linux" ]; then
 
 alias ls="ls -h --color"
@@ -18,6 +19,7 @@ alias ll="ls -alh --color"
 alias lss="ls -alhS --color"
 alias lsn="ls -alht --color"
 alias lsc="la -alhc --color"
+alias du="du -h --max-depth=1"
 fi
 
 #insert the common part
@@ -28,16 +30,15 @@ alias h=history
 alias vi=vim
 alias rsync="rsync --progress"
 alias df="df -hT"
-alias du="du -h --maxdepth=1"
 alias dir="dir --colour" 
 
 #using rmm to rm temp, using rmall to clear trash
-alias rmf="rm -i"
+alias rm="rm -i"
 #alias rm="rm -i"
 if [ ! -d ~/.trash ]; then
 	mkdir -p ~/.trash
 fi
-alias rm=rmm
+#alias rm=rmm
 rmm()
 {
   mv $@ ~/.trash/
@@ -53,8 +54,8 @@ alias cscope="cscope -CR -p10"
 alias ctags="ctags -R *"
 
 #PS1 setting
-#export PS1="\h:\[\e[31;1m\]\W>\[\e[0m\] "
-export PS1='\[\033[01;33m\]\h:\[\e[31;1m\]\W>\[\033[32m\] '
+export PS1="\[\e[31;1m\]\W>\[\e[0m\] "
+#export PS1='\[\033[01;33m\]\h:\[\e[31;1m\]\W>\[\033[32m\] '
 
 #中文需要UTF-8, 设置LC_ALL 会中文乱码 LC_CTYPE, 其他可以是C
 #export LC_ALL=C
