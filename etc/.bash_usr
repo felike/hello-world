@@ -20,6 +20,12 @@ alias lss="ls -alhS --color"
 alias lsn="ls -alht --color"
 alias lsc="la -alhc --color"
 alias du="du -h --max-depth=1"
+#solarized scheme setting
+#for gnome terminal, if want vim to solarized scheme
+#need git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git to install solarized for terminal
+if [ -d ~/.dir_colors/dircolors ]; then
+    eval `dircolors ~/.dir_colors/dircolors`
+fi
 fi
 
 #insert the common part
