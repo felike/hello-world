@@ -1,4 +1,4 @@
-let  mapleader=","
+let  mapleader=";"
 "in normal mode, using w, and in insert mode using j
 imap jj  <esc>
 cmap jj  <esc><esc>
@@ -62,7 +62,8 @@ set ignorecase
 "关闭兼容
 set nocompatible
 "vim 命令行模式智能补全
-set wildmenu
+set wildmenu wildmode=full
+set wildchar=<TAB> wildcharm=<c-z>
 
 "显示状态栏，行号，光标位置
 set laststatus=2

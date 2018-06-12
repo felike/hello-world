@@ -11,7 +11,7 @@ alias ll="ls -alhG"
 alias lss="ls -alhGS"
 alias lsn="ls -alhGt"
 alias lsc="ls -alhGc"
-alias du="du -h --maxdepth=1"
+alias du="du -h -d 1"
 elif [ $sysOs == "Linux" ]; then
 
 alias ls="ls -h --color"
