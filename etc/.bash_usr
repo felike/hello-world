@@ -12,6 +12,9 @@ alias lss="ls -alhGS"
 alias lsn="ls -alhGt"
 alias lsc="ls -alhGc"
 alias du="du -h -d 1"
+#solarized schmee setting
+#for mac terminal, git clone https://github.com/tomislav/osx-terminal.app-colors-solarized.git , and import the preference
+
 elif [ $sysOs == "Linux" ]; then
 
 alias ls="ls -h --color"
