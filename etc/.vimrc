@@ -1,9 +1,9 @@
 let  mapleader=";"
 "in normal mode, using w, and in insert mode using j
-imap jj  <esc>
-cmap jj  <esc><esc>
-vmap jj  <esc>
-omap jj  <esc>
+imap jk  <esc>
+cmap jk  <esc><esc>
+vmap jk  <esc>
+omap jk  <esc>
 
 "设置行首 行尾
 nnoremap wa 0
@@ -211,8 +211,8 @@ filetype plugin indent on
 ""设置配色主题
 set background=dark
 "set background=light
-"colorscheme solarized
-colorscheme molokai
+colorscheme solarized
+"colorscheme molokai
 let g:Powerline_colorscheme='solarized256'
 
 ""缩进可视化配置，vim 自启动, 第二层可视化显示缩进, 色块宽度1,快捷键 wi 开/关缩进可视化
@@ -371,8 +371,8 @@ let NERDTreeAutoDeleteBuffer=1
 " 显示/隐藏 MiniBufExplorer 窗口 buffer list
 map <Leader>bl :MBEToggle<cr>
 " " buffer 切换快捷键
-map <leader>bn :MBEbn<cr>
-map <leader>bp :MBEbp<cr>
+map <leader>bn :bn<cr>
+map <leader>bp :bp<cr>
 
 " 快速选中结对符内的文本
 "  " 快捷键
