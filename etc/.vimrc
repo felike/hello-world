@@ -61,8 +61,10 @@ set ignorecase
 
 "关闭兼容
 set nocompatible
-"vim 命令行模式智能补全
-set wildmenu wildmode=full
+"vim 命令行模式智能补全,zsh mode
+"set wildmenu wildmode=full
+"vim 命令行模式智能补全,bash mode
+set wildmode=longest,list
 set wildchar=<TAB> wildcharm=<c-z>
 
 "显示状态栏，行号，光标位置
