@@ -166,6 +166,7 @@ Plugin 'VundleVim/Vundle.vim'
 "主题
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
+Plugin 'morhetz/gruvbox'
 "状态栏
 Plugin 'Lokaltog/vim-powerline'
 "cpp 高亮
@@ -215,6 +216,7 @@ set background=dark
 "set background=light
 colorscheme solarized
 "colorscheme molokai
+"colorscheme gruvbox 
 let g:Powerline_colorscheme='solarized256'
 
 ""缩进可视化配置，vim 自启动, 第二层可视化显示缩进, 色块宽度1,快捷键 wi 开/关缩进可视化
