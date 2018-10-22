@@ -218,6 +218,8 @@ colorscheme solarized
 "colorscheme molokai
 "colorscheme gruvbox 
 let g:Powerline_colorscheme='solarized256'
+"for vim8 and noevim, need set terguicolars
+"set termguicolors
 
 ""缩进可视化配置，vim 自启动, 第二层可视化显示缩进, 色块宽度1,快捷键 wi 开/关缩进可视化
 let g:indent_guides_enable_on_vim_startup=1
