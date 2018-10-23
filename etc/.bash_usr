@@ -62,8 +62,8 @@ rmall()
 alias cscope="cscope -CR -p10"
 alias ctags="ctags -R *"
 
-#PS1 setting
-export PS1="\[\e[31;1m\]\W>\[\e[0m\] "
+#PS1 setting, ssh set yellow, and local set red
+[[ -n $SSH_TTY ]] && export PS1="\[\e[33m\]\W>\[\e[0m\] " || export PS1="\[\e[31;1m\]\W>\[\e[0m\] "
 #export PS1='\[\033[01;33m\]\h:\[\e[31;1m\]\W>\[\033[32m\] '
 
 #中文需要UTF-8, 设置LC_ALL 会中文乱码 LC_CTYPE, 其他可以是C

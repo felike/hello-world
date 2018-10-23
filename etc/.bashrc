@@ -8,5 +8,6 @@ case $- in
       *) return;;
 esac
 
-[ -f ~/.bash_usr ] && . ~/.bash_usr 
+[ -f ~/.bash_usr ] && . ~/.bash_usr
+[ -f ~/.bash_lab ] && . ~/.bash_lab
 
