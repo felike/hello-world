@@ -63,17 +63,15 @@ set ignorecase
 set nocompatible
 "vim 命令行模式智能补全,zsh mode
 "set wildmenu wildmode=full
+set wildmenu wildmode=longest:full
 "vim 命令行模式智能补全,bash mode
-set wildmode=longest,list
+"set wildmode=longest,list
 set wildchar=<TAB> wildcharm=<c-z>
 
 "显示状态栏，行号，光标位置
 set laststatus=2
 set number
 set ruler
-"高亮当前行列
-"set cursorcolumn
-set cursorline
 
 "禁止光标闪烁
 set gcr=a:block-blinkon0
@@ -174,7 +172,8 @@ Plugin 'Lokaltog/vim-powerline'
 "缩进对齐显示
 Plugin 'nathanaelkane/vim-indent-guides'
 "中文支持，命令模式自动切回英文
-Plugin 'lilydjwg/fcitx.vim'
+"Plugin 'lilydjwg/fcitx.vim'
+Plugin 'CodeFalling/fcitx-vim-osx'
 "标签可视化
 Plugin 'kshenoy/vim-signature'
 "tag列表插件
@@ -218,14 +217,24 @@ colorscheme solarized
 "colorscheme molokai
 "colorscheme gruvbox 
 let g:Powerline_colorscheme='solarized256'
-"for vim8 and noevim, need set terguicolars
-"set termguicolors
 
-""缩进可视化配置，vim 自启动, 第二层可视化显示缩进, 色块宽度1,快捷键 wi 开/关缩进可视化
+"语法高亮，指定语法高亮方案覆盖默认方案
+syntax enable
+syntax on
+
+"高亮当前行列
+highlight cursorline ctermbg=236
+"set cursorcolumn
+set cursorline
+
+""缩进可视化配置，vim 自启动, 第二层可视化显示缩进, 色块宽度1,快捷键 wd 开/关缩进可视化
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
-nnoremap <silent> wi <Plug>IndentGuidesToggle
+nnoremap <silent> wd :IndentGuidesToggle<cr>
+let g:indent_guides_auto_colors=0
+highlight indentguidesodd ctermbg=238
+highlight indentguideseven ctermbg=242
 
 ""标签可视化 配置
 let g:SignatureMap = {
@@ -336,9 +345,9 @@ let g:UltiSnipsJumpBackwardTrigger="<leader><s-tab>"
 " " YCM 补全
 " " YCM 补全菜单配色
 " " 菜单
-highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
+"highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
 " " 选中项
-highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
+"highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
 
 " " 补全功能在注释中同样有效
 let g:ycm_complete_in_comments=1
@@ -416,8 +425,4 @@ nnoremap <leader>ffp :LeaderfFunctionPattern<cr>
 nnoremap <leader>ffc :LeaderfFunctionCword<cr>
 nnoremap <leader>ffo :LeaderfFunctionAllPattern<cr>
 
-
-"语法高亮，指定语法高亮方案覆盖默认方案
-syntax enable
-syntax on
 
