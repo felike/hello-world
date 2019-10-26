@@ -1,4 +1,5 @@
 #apt aliyun sourcelist, bionic 18.04
+#/etc/apt/sources.list
 deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
