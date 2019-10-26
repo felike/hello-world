@@ -1,0 +1,9 @@
+# git hub setting
+# ~/.gitconfig
+[user]
+	email = feimengke1987@163.com
+	name = felike
+[credential]
+    helper = store
+[push]
+    default = simple    
