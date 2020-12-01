@@ -41,11 +41,14 @@ inoremap jf <c-x><c-f>
 inoremap jo <c-x><c-o>
 inoremap ji <c-x><c-i>
 cnoremap jd <c-d>
- 
+
 
 "设置粘贴版
 vnoremap wy "+y
 nnoremap wp "+p
+
+"设置自动复制到粘贴板
+set clipboard=unnamed
 
 "设置保存，关闭
 "nnoremap <leader>wq :wa<cr> :q<cr>
@@ -191,7 +194,7 @@ Plugin 'scrooloose/nerdcommenter'
 "模板补全
 Plugin 'SirVer/ultisnips'
 "自动补全
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 "工程列表
 Plugin 'scrooloose/nerdtree'
 "buffer 显示
@@ -215,7 +218,7 @@ set background=dark
 "set background=light
 colorscheme solarized
 "colorscheme molokai
-"colorscheme gruvbox 
+"colorscheme gruvbox
 let g:Powerline_colorscheme='solarized256'
 
 "语法高亮，指定语法高亮方案覆盖默认方案
@@ -263,13 +266,13 @@ let g:SignatureMap = {
 
 
 ""tag 列表插件设置
-"设置 tagbar 子窗口的位置出现在主编辑区的左边 
-let tagbar_left=1 
+"设置 tagbar 子窗口的位置出现在主编辑区的左边
+let tagbar_left=1
 "设置显示／隐藏标签列表子窗口的快捷键。速记：tag list`
-nnoremap <Leader>tl :TagbarToggle<CR> 
-" " 设置标签子窗口的宽度 
-let tagbar_width=32 
-" " tagbar 子窗口中不显示冗余帮助信息 
+nnoremap <Leader>tl :TagbarToggle<CR>
+" " 设置标签子窗口的宽度
+let tagbar_width=32
+" " tagbar 子窗口中不显示冗余帮助信息
 let g:tagbar_compact=1
 " 设置 ctags 对哪些代码标识符生成标签
 let g:tagbar_type_cpp = {
@@ -277,7 +280,7 @@ let g:tagbar_type_cpp = {
      \ 'kinds'     : [
          \ 'c:classes:0:1',
          \ 'd:macros:0:1',
-         \ 'e:enumerators:0:0', 
+         \ 'e:enumerators:0:0',
          \ 'f:functions:0:1',
          \ 'g:enumeration:0:1',
          \ 'l:local:0:1',
@@ -308,12 +311,12 @@ let g:tagbar_type_cpp = {
 \ }
 
 "" 代码导航
- 
+
 " 基于标签的代码导航
 " 设置插件 indexer 调用 ctags 的参数
 " 默认 --c++-kinds=+p+l，重新设置为 --c++-kinds=+l+p+x+c+d+e+f+g+m+n+s+t+u+v
 " 默认 --fields=+iaS 不满足 YCM 要求，需改为 --fields=+iaSl
-let g:indexer_ctagsCommandLineOptions="--c++-kinds=+l+p+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q" 
+let g:indexer_ctagsCommandLineOptions="--c++-kinds=+l+p+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
 " 正向遍历同名标签
 nmap <Leader>tn :tnext<CR>
 " 反向遍历同名标签
@@ -424,5 +427,3 @@ nnoremap <leader>ffa :LeaderfFunctionAll<cr>
 nnoremap <leader>ffp :LeaderfFunctionPattern<cr>
 nnoremap <leader>ffc :LeaderfFunctionCword<cr>
 nnoremap <leader>ffo :LeaderfFunctionAllPattern<cr>
-
-

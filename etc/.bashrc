@@ -11,3 +11,5 @@ esac
 [ -f ~/.bash_usr ] && . ~/.bash_usr
 [ -f ~/.bash_lab ] && . ~/.bash_lab
 
+#need install autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
